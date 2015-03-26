@@ -12,9 +12,12 @@ simply use the arduino IDE.
 
 The ruby version is in `blinking.rb`, using artoo requires installing
 firmata on your arduino. Run `./install.sh` to run bundle install,
-download `gort` and upload the firmware to your arduino.
+download `gort` and upload the firmware to your arduino. Note, you may
+have to update the shell script to work for other OS and/or raspberry
+pi.
 
-You may have to update the shell script to work for other OS and/or
-raspberry pi.
+Once you installed firmata on your arduino, `ruby blinking.rb` should
+run your app.
 
-Run `ruby -I.:spec spec/blinking_spec.rb` to run the specs
+Run `ruby -I.:spec spec/blinking_spec.rb` to run the specs. The specs
+don't require the arduino to be connected (it is mocked out).
